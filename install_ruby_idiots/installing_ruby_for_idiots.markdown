@@ -26,7 +26,7 @@ chruby and the rest is history.
 
 ## Believing In Yourself
 
-As some quick basics, lines starting with <code>$</code> are things to be
+Some quick basics: lines starting with <code>$</code> are things to be
 entered at the shell. If something <code>looks like code</code> but doesn't
 start with $ its either the output of a command or something to put into
 a file.
@@ -47,11 +47,11 @@ script will allow you to install various versions of ruby.
     $ sudo ./install.sh
 
 Super simple and it installs everything in /usr/local. If you would rather
-install it somewhere else just
+install it somewhere else just run
 
     $ export $PREFIX="/where/you/want"
 
-before running ./install.sh
+*before* running ./install.sh
 
 #### Install some rubies
 
@@ -74,10 +74,10 @@ the pattern of rubytype-version-patchlevel in your install like I did.
 
 #### Install chruby
 
-Okay, now that you (hopefully) have some rubies installed, let us go over
-changing in between them. We are going to install
+Okay, now that you (hopefully) have some rubies installed, let's go over
+changing between them. We are going to install
 [chruby](https://github.com/postmodern/chruby). Luckily its a really simple
-script just like ruby-build.
+script, just like ruby-build.
 
     $ wget -O chruby-0.3.5.tar.gz https://github.com/postmodern/chruby/archive/v0.3.5.tar.gz
     $ tar -xzvf chruby-0.3.5.tar.gz
