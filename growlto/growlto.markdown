@@ -1,6 +1,6 @@
 I wanted to have growl and decided it wouldn't be too hard to just build it
 myself. There were some snags so I've made a simple howto.
-
+<p>[[MORE]]</p>
 ## Steps:
 
   1. Install Xcode (Download from appstore)
