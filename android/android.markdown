@@ -32,6 +32,16 @@ The camera has been consistently a huge disappointment when I'm out and about.
 My iPhone has essentially replaced my DSLR for quick snapshots when I'm out but
 the Nexus 4 is basically useless.
 
+#### iPhone 5
+![iPhone 5](iPhone5 Bread Small.jpg)
+
+#### Nexus 4
+![Nexus 4](Nexus 4 Bread Small.jpg)
+
+I've resampled these to be 1024x768 w/ 200dpi. As you can see there is no
+contest. The iPhone camera could be a decent point and shoot whereas the Nexus
+4 camera is still clearly a phone camera.
+
 ## Android 4.2 (Jelly Bean)
 ### Notification Bar
 
@@ -45,15 +55,15 @@ Love it. The iOS's icon carousel just doesn't compare at all. Being able to pop
 it up scroll around and swipe away apps reduces the barriers to app switching.
 This has been great with copying between apps or flipping between lastpass.
 
-### App Springboard (I'm sure this has an actual name)
+### App Menu
 
-The visual metaphor is fairly confusing. If you pull to the one side it tilts,
+The visual metaphor in the little . If you pull to the one side it tilts,
 but flipping through is like a deck of cards. Why is this different than the
 home screens which are very clearly laid out next to each other? I've also had
 apps disappear from the launcher after an update. Why can't you search it?
-Bizarre. The widgets list is entirely useless. Things aren't consistently
-named and are sorted alphabetically rather than by which app created them so it
-tends to go on for pages after even just a few apps are in installed
+Bizarre. The widgets list is entirely useless. Things aren't consistently named
+and are sorted alphabetically rather than by which app created them so it tends
+to go on for pages after even just a few apps are in installed
 
 ### Interface consistency is all over the map among google apps
 
@@ -84,7 +94,15 @@ I mentioned before, but regardless I find it very annoying.
 
 Devastatingly bad. I'll often take a picture and at the confirm screen it will
 look fine. I then confirm the photo and am shown a new and awful rendition of
-what I just took. ![screenshots]()
+what I just took. To give an example of what I mean: 
+
+![Screenshot of Camera App](At Camera Screen.png)
+
+This isn't the worlds greatest photo but it looks okay.
+
+![Screenshot of Picture](At upload screen.png)
+
+And fail. What the heck happened?
 
 ## Third Party stuff
 ### Twitter app
