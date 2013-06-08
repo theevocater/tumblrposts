@@ -1,42 +1,24 @@
 # Installing Ruby For Idiots (like me)
 
-I've had a lot of trouble in the past installing things like rvm and rbenv.
-When I had to install ruby yesterday for a work project, I asked on twitter and
-heard mostly a chorus for using rvm. So I installed rvm, navigated its
-monstrous interface and had some rubies running. But then I noticed this:
+## Motivation
 
-<p>[[MORE]]</p>
-
-    $ type cd
-    cd is a function
-    cd ()
-    {
-        if builtin cd "$@"; then
-            [[ -n "${rvm_current_rvmrc:-}" && "$*" == "." ]] && rvm_current_rvmrc="" || true;
-            __rvm_cd_functions_set;
-            return 0;
-        else
-            return $?;
-        fi
-    }
-
-What!? I barely use ruby, so replacing cd with some function shim was not
-really something I wanted. At the suggestion of @steveklabnik I checked out
-chruby and the rest is history.
-
-## Believing In Yourself
+I've previously had some trouble installing ruby because so I've endeavored to
+create a guide that even I could use to successfully install ruby. This guide
+assumes that you have a basic understandings of a shell (something along the
+lines of "I know how to open a terminal on my computer"). Hopefully you can get
+by just pasting each command in to your shell and then reading the output.
 
 Some quick basics: lines starting with <code>$</code> are things to be
 entered at the shell. If something <code>looks like code</code> but doesn't
 start with $ its either the output of a command or something to put into
 a file.
 
-This guide assumes that you have a basic understandings of a shell (something
-along the lines of "I know how to open a terminal on my computer"). Hopefully
-you can get by just pasting each command in to your shell and then reading the
-output.
+## Install
 
-#### Installing ruby-build
+If you ever run in to trouble or things aren't working, please consult the
+troubleshooting section.
+
+### Installing ruby-build
 
 The first thing you are going to want is
 [ruby-build](https://github.com/sstephenson/ruby-build). This small shell
@@ -72,7 +54,7 @@ the pattern of rubytype-version-patchlevel in your install like I did.
     $ ruby-build 2.0.0-p195 ~/.rubies/ruby-2.0.0-p195
     $ ruby-build $more_rubies $more_places
 
-#### Install chruby
+### Install chruby
 
 Okay, now that you (hopefully) have some rubies installed, let's go over
 changing between them. We are going to install
@@ -84,7 +66,8 @@ script, just like ruby-build.
     $ cd chruby-0.3.5/
     $ sudo make install
 
-Almost done! Just need to add some lines to your bashrc for chruby.
+Almost done! Just need to add some lines to your shell configuration
+for chruby.
 
     if [[ -s "/usr/local/share/chruby/chruby.sh" ]] ; then
       # this line adds all the helpful chruby stuff to your environment
@@ -95,9 +78,9 @@ Almost done! Just need to add some lines to your bashrc for chruby.
       export RUBIES=("$HOME/.rubies/*")
     fi
 
-Save that to ~/.bashrc and reopen your shell!
+Save that to ~/.bash_profile (or whatever is appropriate) and reopen your shell!
 
-#### Using chruby
+### Using chruby
 
 Now for the easiest part: using chruby.
 
@@ -129,7 +112,7 @@ Chruby is also helpful because it sets up the correct environment as well:
 When run as a user it will direct gems to be installed locally and sets up the
 correct flags for ruby.
 
-#### (Optional) Bundler
+### (Optional) Bundler
 
 If you are new to ruby like me, you will probably also want to install bundler.
 Bundler is a simple ruby gem that helps install other gems. In your ruby
@@ -138,11 +121,24 @@ install bundler (and any other gem) we use the program aptly named "gem".
 
     gem install bundler
 
+## Troubleshooting
+
+#### OSX: unable to build rubies older than 1.9.3-p125
+
+Here you will need the excellent [homebrew](http://mxcl.github.io/homebrew/)
+which you will want regardless.  Follow their instructions for installing
+homebrew and then run the command ruby-build printed out. If you lost it:
+
+     $ brew tap homebrew/dupes && brew install apple-gcc42
+
+Now rerun your ruby-build.
+
 ## Closing
 
 After all that you should now have a basic system for installing and using
 ruby. If you run into any trouble or have amendments to this document, please
-feel free to find me on twitter @theevocater. I also accept pull requests at [github]().
+feel free to find me on twitter @theevocater. I also accept pull requests at
+[github](https://github.com/theevocater/tumblrposts/blob/master/install_ruby_idiots/installing_ruby_for_idiots.markdown).
 
 ## Helpful links
 
