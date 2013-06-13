@@ -1,13 +1,11 @@
 # Installing Ruby For Idiots (like me)
 
-## Motivation
-
 I've previously had some trouble installing ruby because so I've endeavored to
 create a guide that even I could use to successfully install ruby. This guide
 assumes that you have a basic understandings of a shell (something along the
 lines of "I know how to open a terminal on my computer"). Hopefully you can get
 by just pasting each command in to your shell and then reading the output.
-
+[[MORE]]
 Some quick basics: lines starting with <code>$</code> are things to be
 entered at the shell. If something <code>looks like code</code> but doesn't
 start with $ its either the output of a command or something to put into
@@ -29,26 +27,27 @@ script will allow you to install various versions of ruby.
     $ sudo ./install.sh
 
 Super simple and it installs everything in /usr/local. If you would rather
-install it somewhere else just run
+install it somewhere else just run the following *before* running ./install.sh
 
     $ export $PREFIX="/where/you/want"
 
-*before* running ./install.sh
-
 #### Install some rubies
 
-Now that we have ruby build, let us install a ruby.
+Now that we have ruby-build, let us install a ruby.
 
     $ ruby-build --definitions
 
-gives us a list of all the rubies ruby-build knows about. I happened to need
-ruby 1.9.2 so I went with 1.9.2-p320
+That gives us a list of all the rubies ruby-build knows about. I happened to need
+ruby 1.9.2 so let's install that and the latest ruby-2.
 
-The first argument is just the version you want copied exactly from the
+The first argument is just the version you want as it appears exactly in the
 --definitions list. The second argument is the dir to install ruby in. chruby
 recommends you install things at /opt/rubies but I like to keep things in my
-homedir on my laptop. Tip: chruby can understand some short hand if you follow
-the pattern of rubytype-version-patchlevel in your install like I did.
+homedir on my laptop. Where you install ruby isn't super important, chruby just
+has to know where they are. 
+
+_Tip_: chruby can understand some short hand if you follow the pattern of
+rubytype-version-patchlevel in your install directory like I do.
 
     $ ruby-build 1.9.2-p320 ~/.rubies/ruby-1.9.2-p320
     $ ruby-build 2.0.0-p195 ~/.rubies/ruby-2.0.0-p195
@@ -76,6 +75,8 @@ for chruby.
       # you could also do something like RUBIES=("/some/places", "something/else/")
       # the * just grabs all rubies installed in that directory
       export RUBIES=("$HOME/.rubies/*")
+      # or if you went with /opt/rubies:
+      # export RUBIES=("/opt/rubies/*")
     fi
 
 Save that to ~/.bash_profile (or whatever is appropriate) and reopen your shell!
