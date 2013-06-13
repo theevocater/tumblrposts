@@ -5,7 +5,7 @@ create a guide that even I could use to successfully install ruby. This guide
 assumes that you have a basic understandings of a shell (something along the
 lines of "I know how to open a terminal on my computer"). Hopefully you can get
 by just pasting each command in to your shell and then reading the output.
-[[MORE]]
+<p>[[MORE]]</p>
 Some quick basics: lines starting with <code>$</code> are things to be
 entered at the shell. If something <code>looks like code</code> but doesn't
 start with $ its either the output of a command or something to put into
